@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'" />
+    <title>连接力源金蝶研发工作台</title>
+    <link rel="stylesheet" href="pi-workbench-connect.css" />
+  </head>
+  <body>
+    <main>
+      <div class="mark" aria-hidden="true">力</div>
+      <h1>连接力源金蝶研发工作台</h1>
+      <p>输入管理员提供的工作台地址，连接后用个人账号登录。</p>
+      <form>
+        <label for="origin">服务器地址</label>
+        <input type="url" id="origin" name="origin" placeholder="https://workbench.example.internal" required autofocus />
+        <p id="error" role="alert"></p>
+        <button>连接工作台</button>
+      </form>
+    </main>
+    <script src="pi-workbench-connect.js"></script>
+  </body>
+</html>

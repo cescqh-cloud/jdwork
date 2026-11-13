@@ -1,0 +1,12 @@
+:root { color-scheme: light; font: 15px/1.6 system-ui, "Microsoft YaHei", sans-serif; color: #172822; background: #f5f7f4; }
+body { margin: 0; }
+main { padding: 26px 38px; }
+.mark { background: #185448; color: white; border-radius: 10px; width: 40px; height: 40px; display: grid; place-items: center; font: 22px Georgia, serif; }
+h1 { font-size: 25px; margin: 10px 0 3px; }
+p { color: #52625c; margin: 0 0 16px; }
+label { display: block; font-weight: 600; margin-bottom: 5px; }
+input { box-sizing: border-box; width: 100%; font: inherit; padding: 9px 11px; border: 1px solid #bdc9c2; border-radius: 8px; background: white; }
+input:focus-visible, button:focus-visible { outline: 2px solid #185448; outline-offset: 2px; }
+#error { min-height: 22px; color: #9b3034; margin: 4px 0; }
+button { display: block; margin-left: auto; font: inherit; padding: 8px 14px; border: 0; border-radius: 8px; color: white; background: #185448; cursor: pointer; }
+button:disabled { opacity: .55; cursor: wait; }

@@ -1,0 +1,6 @@
+力源金蝶研发工作台基于 NanmiCoder/cc-haha v0.7.7。
+上游提交 fbebbdee5d455a2315733fb3330bbfe3475f6dee
+Based on cc-haha: https://github.com/NanmiCoder/cc-haha
+Copyright (c) 2026 cc-haha
+本企业版本增加控制服务、企业身份与设备绑定、模型网关、金蝶星瀚标准单据只读查询、需求审批、知识记忆、交付与签名更新。
+上游许可与第三方声明见同目录文件。本构建面向组织内部使用。

@@ -1,0 +1,23 @@
+{
+  "name": "@liyuan/enterprise-control",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "bun@1.4.3",
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "migrate": "bun run src/migrate.ts",
+    "create-user": "bun run src/create-user.ts",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "hono": "4.13.17",
+    "yaml": "2.8.3",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@types/bun": "1.4.3",
+    "typescript": "5.9.3"
+  }
+}

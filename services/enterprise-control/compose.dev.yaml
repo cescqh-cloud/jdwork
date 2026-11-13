@@ -1,0 +1,33 @@
+name: enterprise-control-dev
+
+services:
+  postgres:
+    image: postgres:16.15-bookworm
+    environment:
+      POSTGRES_DB: enterprise_control_test
+      POSTGRES_USER: enterprise_fixture
+      POSTGRES_PASSWORD: enterprise_fixture_only
+    ports:
+      - "127.0.0.1:${ENTERPRISE_DEV_PG_PORT:-55432}:5432"
+    tmpfs:
+      - /var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "enterprise_fixture", "-d", "enterprise_control_test", "-h", "127.0.0.1"]
+      interval: 2s
+      timeout: 2s
+      retries: 25
+
+  redis:
+    image: redis:7.4.12-alpine
+    command: ["redis-server", "--requirepass", "enterprise_fixture_only", "--save", "", "--appendonly", "no"]
+    environment:
+      REDISCLI_AUTH: enterprise_fixture_only
+    ports:
+      - "127.0.0.1:${ENTERPRISE_DEV_REDIS_PORT:-56379}:6379"
+    tmpfs:
+      - /data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 2s
+      retries: 25
